@@ -1,0 +1,43 @@
+<p style="font-weight: bolder;">component-two works!</p>
+
+<!-- normal component array -->
+<ul *ngFor="let detail of marksDetails">
+    <li>{{detail.subject}} - {{detail.marks}}</li>
+</ul>
+
+<!-- Use of Service Marks Array -->
+<!-- <ul *ngFor="let detail of marksService.centralMarksDetails">
+    <li>{{detail.subject}} - {{detail.marks}}</li>
+</ul> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-1">
+            Subject: <input type="text" id="txtSubject" [(ngModel)]="subject">
+        </div>
+        <div class="col-md-12 mt-1">
+            Marks: <input type="text" id="txtMarks" [(ngModel)]="marks">
+        </div>
+        <div class="col-md-12 mt-1">
+            <button class="btn btn-primary" (click)="pushIntoArray()">Push into Array</button>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-1">
+            Value1: <input type="text" id="txtOne" [(ngModel)]="valueOne">
+        </div>
+        <div class="col-md-12 mt-1">
+            Value2: <input type="text" id="txtTwo" [(ngModel)]="valueTwo">
+        </div>
+        <div class="col-md-12 mt-1">
+            <button class="btn btn-primary" (click)="getSum()">Get Sum</button>
+        </div>
+        <div class="col-md-12 mt-1">
+            Result : {{result}}
+        </div>
+    </div>
+</div>
